@@ -7,6 +7,8 @@ import (
 	"github.com/oct2pus/bocto"
 )
 
+const IMAGE_URL = "https://raw.githubusercontent.com/oct2pus/quiet-year/main/emoji/"
+
 var (
 	decks   *([]deck)
 	session bool
@@ -60,16 +62,14 @@ func drawCard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 			// if this bot is expanded upon.
 			session = false
 		}
-		bot.Session.ChannelMessageSendEmbed(mC.ChannelID, &discordgo.MessageEmbed{
-			Title: lengthen(card.Face) + " of " + season,
-			Fields: []*discordgo.MessageEmbedField{
-				{Value: card.Text, Inline: false},
-				{Name: "A", Value: card.Option1, Inline: true},
-				{Name: "B", Value: card.Option2, Inline: true},
-			},
-			Footer:    &discordgo.MessageEmbedFooter{Text: remaining + " cards left.", IconURL: "https://raw.github.com/oct2pus/quiet-year/emoji/" + emojiFooter},
-			Thumbnail: &discordgo.MessageEmbedThumbnail{URL: "https://raw.github.com/oct2pus/quiet-year/emoji/" + emojiThumb},
-		})
+		embed := &discordgo.MessageEmbed{
+			Title:     lengthen(card.Face) + " of " + season,
+			Footer:    &discordgo.MessageEmbedFooter{Text: remaining + " cards left.", IconURL: IMAGE_URL + emojiFooter},
+			Thumbnail: &discordgo.MessageEmbedThumbnail{URL: IMAGE_URL + emojiThumb},
+		}
+		bot.Session.ChannelMessageSend(mC.ChannelID, "lol")
+		bot.Session.ChannelMessageSendEmbed(mC.ChannelID, embed)
+		println("lol")
 	}
 }
 
