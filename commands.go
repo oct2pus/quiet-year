@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/bwmarrin/discordgo"
@@ -44,19 +45,19 @@ func drawCard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 		case len((*decks)[0].Cards) >= 1:
 			card, err = (*decks)[0].Draw()
 			season = "spring"
-			remaining = (string)(len((*decks)[0].Cards))
+			remaining = fmt.Sprintf("%v", (len((*decks)[0].Cards)))
 		case len((*decks)[1].Cards) >= 1:
 			card, err = (*decks)[1].Draw()
 			season = "summer"
-			remaining = (string)(len((*decks)[1].Cards))
+			remaining = fmt.Sprintf("%v", (len((*decks)[1].Cards)))
 		case len((*decks)[2].Cards) >= 1:
 			card, err = (*decks)[2].Draw()
 			season = "fall"
-			remaining = (string)(len((*decks)[2].Cards))
+			remaining = fmt.Sprintf("%v", (len((*decks)[2].Cards)))
 		case len((*decks)[3].Cards) >= 1:
 			card, err = (*decks)[3].Draw()
 			season = "winter"
-			remaining = (string)(len((*decks)[3].Cards))
+			remaining = fmt.Sprintf("%v", (len((*decks)[3].Cards)))
 		}
 		emojiFooter, emojiThumb := getEmoji(season)
 		if err != nil {
