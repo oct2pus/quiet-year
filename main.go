@@ -58,6 +58,7 @@ func main() {
 func addCommands(bot bocto.Bot) bocto.Bot {
 	bot.AddCommand("start", begin, true)
 	bot.AddCommand("draw", drawCard, true)
+	bot.AddCommand("about", attribute, true)
 	return bot
 }
 
