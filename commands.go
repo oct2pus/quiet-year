@@ -29,7 +29,7 @@ func begin(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 			(*decks)[i].Shuffle()
 		}
 		session = true
-		bot.Session.ChannelMessageSend(mC.ChannelID, "**==Game Begins==**")
+		bot.Session.ChannelMessageSend(mC.ChannelID, "**==GAME START==**")
 	}
 }
 
@@ -58,6 +58,9 @@ func drawCard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 			card, err = (*decks)[3].Draw()
 			season = "winter"
 			remaining = fmt.Sprintf("%v", (len((*decks)[3].Cards)))
+			if card.Face == "K♠" {
+				session = false
+			}
 		}
 		emojiFooter, emojiThumb := getEmoji(season)
 		if err != nil {
@@ -65,29 +68,38 @@ func drawCard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 			// TODO: There should be a way to save a session
 			// if this bot is expanded upon.
 			session = false
+			return
 		}
 		embed := &discordgo.MessageEmbed{
 			Title:     lengthen(card.Face) + " of " + season,
 			Footer:    &discordgo.MessageEmbedFooter{Text: remaining + " cards left.", IconURL: IMAGE_URL + emojiFooter},
 			Thumbnail: &discordgo.MessageEmbedThumbnail{URL: IMAGE_URL + emojiThumb},
 		}
-		/*embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
-			Name:   "Description",
-			Value:  card.Text,
-			Inline: false,
-		})
-		embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
-			Name:   "A",
-			Value:  card.Option1,
-			Inline: true,
-		})
-		embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
-			Name:   "B",
-			Value:  card.Option2,
-			Inline: true,
-		})*/
-		bot.Session.ChannelMessageSend(mC.ChannelID, "lol")
+		if card.Text != "" {
+			embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
+				Name:   "Description",
+				Value:  card.Text,
+				Inline: false,
+			})
+		}
+		if card.Option1 != "" {
+			embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
+				Name:   "A",
+				Value:  card.Option1,
+				Inline: true,
+			})
+		}
+		if card.Option2 != "" {
+			embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
+				Name:   "B",
+				Value:  card.Option2,
+				Inline: true,
+			})
+		}
 		bot.Session.ChannelMessageSendEmbed(mC.ChannelID, embed)
+		if !session {
+			bot.Session.ChannelMessageSend(mC.ChannelID, "**==GAME OVER==**")
+		}
 	}
 }
 
