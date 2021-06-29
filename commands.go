@@ -44,19 +44,19 @@ func drawCard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 		switch {
 		case len((*decks)[0].Cards) >= 1:
 			card, err = (*decks)[0].Draw()
-			season = "spring"
+			season = "Spring"
 			remaining = fmt.Sprintf("%v", (len((*decks)[0].Cards)))
 		case len((*decks)[1].Cards) >= 1:
 			card, err = (*decks)[1].Draw()
-			season = "summer"
+			season = "Summer"
 			remaining = fmt.Sprintf("%v", (len((*decks)[1].Cards)))
 		case len((*decks)[2].Cards) >= 1:
 			card, err = (*decks)[2].Draw()
-			season = "fall"
+			season = "Fall"
 			remaining = fmt.Sprintf("%v", (len((*decks)[2].Cards)))
 		case len((*decks)[3].Cards) >= 1:
 			card, err = (*decks)[3].Draw()
-			season = "winter"
+			season = "Winter"
 			remaining = fmt.Sprintf("%v", (len((*decks)[3].Cards)))
 			if card.Face == "K♠" {
 				session = false
@@ -103,6 +103,36 @@ func drawCard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 	}
 }
 
+func discard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
+	var err error
+	if session {
+		switch {
+		case len((*decks)[0].Cards) >= 1:
+			_, err = (*decks)[0].Draw()
+		case len((*decks)[1].Cards) >= 1:
+			_, err = (*decks)[1].Draw()
+		case len((*decks)[2].Cards) >= 1:
+			_, err = (*decks)[2].Draw()
+		case len((*decks)[3].Cards) >= 1:
+			_, err = (*decks)[3].Draw()
+		}
+		if err != nil {
+			bot.Session.ChannelMessageSend(mC.ChannelID, "Somehow drew too many cards. :(\n, ending game prematurely.")
+			// TODO: There should be a way to save a session
+			// if this bot is expanded upon.
+			session = false
+			return
+		}
+	}
+}
+
+func end(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
+	if session {
+		session = false
+		bot.Session.ChannelMessageSend(mC.ChannelID, "**==GAME OVER==**")
+	}
+}
+
 func attribute(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 	bot.Session.ChannelMessageSend(mC.ChannelID, "This bot uses Mutant Standard emoji (https://mutant.tech) which are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (https://creativecommons.org/licenses/by-nc-sa/4.0/).")
 }
@@ -141,13 +171,13 @@ func lengthen(face string) string {
 }
 func getEmoji(season string) (footer, thumbnail string) {
 	switch season {
-	case "spring":
+	case "Spring":
 		return "heart_suit.png", "rose.png"
-	case "summer":
+	case "Summer":
 		return "diamond_suit.png", "sun.png"
-	case "fall":
+	case "Fall":
 		return "club_suit.png", "maple_leaf.png"
-	case "winter":
+	case "Winter":
 		return "spade_suit.png", "snowflake.png"
 	}
 	return "crt_test_pattern.png", "crt_blue_screen.png"
