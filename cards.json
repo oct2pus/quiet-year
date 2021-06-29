@@ -1,0 +1,368 @@
+{
+    "Cards": [
+        {
+            "Suit": 0,
+            "Face": "A♥",
+			"Text": "",
+            "Option1": "What group has the highest status in the community? What must people do to gain inclusion in this group?",
+            "Option2": "Are there distinct family units in the community? If so, what family structures are common?"
+        },
+        {
+            "Suit": 0,
+            "Face": "2♥",
+			"Text": "",
+            "Option1": "There’s a large body of water on the map. Where is it? What does it look like?",
+            "Option2": "There’s a giant man-made structure on the map. Where is it? Why is it abandoned?"
+        },
+        {
+            "Suit": 0,
+            "Face": "3♥",
+			"Text": "",
+            "Option1": "Someone new arrives. Who?",
+            "Option2": "Two of the community’s younger members get into a fight. What provoked them?"
+        },
+		{
+			"Suit": 0,
+			"Face": "4♥",
+			"Text": "",
+			"Option1": "What important and basic tools does the community lack?",
+			"Option2": "Where are you storing your food? Why is this a risky place to store things?"
+		},
+		{
+			"Suit": 0,
+			"Face": "5♥",
+			"Text": "",
+			"Option1": "There is a disquieting legend about this place. What is it?",
+			"Option2": "Alarming weather patterns destroy something. How and what?"
+		},
+		{
+			"Suit": 0,
+			"Face": "6♥",
+			"Text": "",
+			"Option1": "Are there children in the community? If there are, what is their role in the community?",
+			"Option2": "How old are the eldest members of the community? What unique needs do they have?"
+		},
+		{
+			"Suit": 0,
+			"Face": "7♥",
+			"Text": "",
+			"Option1": "Where does everyone sleep? Who is unhappy with this arrangement, and why?",
+			"Option2": "What natural predators roam this area? Are you safe?"
+		},
+		{
+			"Suit": 0,
+			"Face": "8♥",
+			"Text": "",
+			"Option1": "An old piece of machinery is discovered, broken but perhaps repairable. What is it? What would it be useful for?",
+			"Option2": "An old piece of machinery is discovered, cursed and dangerous. How does the community destroy it?"
+		},
+		{
+			"Suit": 0,
+			"Face": "9♥",
+			"Text": "",
+			"Option1": "A charismatic young girl convinces many to help her with an elaborate scheme. What is it? Who joins her endeavors? **Start a project to reflect.**",
+			"Option2": "A charismatic young girl tries to tempt many into sinful or dangerous activity. Why does she do this? How does the community respond?"
+		},
+		{
+			"Suit": 0,
+			"Face": "10♥",
+			"Text": "",
+			"Option1": "There’s another community somewhere on the map. Where are they? What sets them apart from you?",
+			"Option2": "What belief or practice helps to unify your community?"
+		},
+		{
+			"Suit": 0,
+			"Face": "J♥",
+			"Text": "",
+			"Option1": "You see a good omen. What is it?",
+			"Option2": "You see a bad omen. What is it?"
+		},
+		{
+			"Suit": 0,
+			"Face": "Q♥",
+			"Text": "",
+			"Option1": "What’s the most beautiful thing in this area?",
+			"Option2": "What’s the most hideous thing in this area?"
+		},
+		{
+			"Suit": 0,
+			"Face": "K♥",
+			"Text": "",
+			"Option1": "A young boy starts digging in the ground, and discovers something unexpected. What is it?",
+			"Option2": "An old man confesses to past crimes and atrocities. What has he done?"
+		},
+		{
+			"Suit": 1,
+			"Face": "A♦",
+			"Text": "",
+			"Option1": "A contingent within the community demand to be heard. Who are they? What are they asking for?",
+			"Option2": "A contingent within the community have acted on their frustrations. What have they damaged, and why did they damage it? Is it permanent?"
+		},
+		{
+			"Suit": 1,
+			"Face": "2♦",
+			"Text": "",
+			"Option1": "Someone new arrives. Who? Why are they in distress?",
+			"Option2": "Someone leaves the community. Who? What are they looking for?"
+		},
+		{
+			"Suit": 1,
+			"Face": "3♦",
+			"Text": "",
+			"Option1": "Summer is a time for production and tending to the earth. **Start a project related to food production.**",
+			"Option2": "Summer is a time for conquest and the gathering of might. **Start a project related to military readiness and conquest.**"
+		},
+		{
+			"Suit": 1,
+			"Face": "4♦",
+			"Text": "",
+			"Option1": "The eldest among you dies. What caused the death?",
+			"Option2": "The eldest among you is very sick. Caring for them and searching for a cure requires the help of the entire community. **Do not reduce project dice this week.**"
+		},
+		{
+			"Suit": 1,
+			"Face": "5♦",
+			"Text": "",
+			"Option1": "**A project finishes early.** What led to its early completion?",
+			"Option2": "The weather is nice and people can feel the potential all around them. **Start a new project.**"
+		},
+		{
+			"Suit": 1,
+			"Face": "6♦",
+			"Text": "",
+			"Option1": "Outsiders arrive in the area. Why are they a threat? How are they vulnerable?",
+			"Option2": "Outsiders arrive in the area. How many? How are they greeted?"
+		},
+		{
+			"Suit": 1,
+			"Face": "7♦",
+			"Text": "",
+			"Option1": "Introduce a mystery at the edge of the map.",
+			"Option2": "An unattended situation becomes problematic and scary. What is it? How does it go awry?"
+		},
+		{
+			"Suit": 1,
+			"Face": "8♦",
+			"Text": "",
+			"Option1": "Someone tries to take control of the community by force. Do they succeed? Why do they do this?",
+			"Option2": "A headstrong community member decides to put one of their ideas in motion. **Start a foolish project.**"
+		},
+		{
+			"Suit": 1,
+			"Face": "9♦",
+			"Text": "",
+			"Option1": "**A project fails.** Which one? Why?",
+			"Option2": "Something goes foul and supplies are ruined. **Add a new Scarcity.**"
+		},
+		{
+			"Suit": 1,
+			"Face": "10♦",
+			"Text": "",
+			"Option1": "You discover a cache of supplies or resources. **Add a new Abundance.**",
+			"Option2": "A Scarcity has gone unaddressed for too long! **Start a project that will alleviate that Scarcity.**"
+		},
+		{
+			"Suit": 1,
+			"Face": "J♦",
+			"Text": "",
+			"Option1": "Predators and bad omens are afoot. You are careless, and someone goes missing under ominous circumstances. Who?",
+			"Option2": "Predators and bad omens are afoot. What measures do you take to keep everyone safe and under surveillance? **Do not reduce project dice this week.**"
+		},
+		{
+			"Suit": 1,
+			"Face": "Q♦",
+			"Text": "",
+			"Option1": "**A project finishes early.** Which one? Why?",
+			"Option2": "***If there are no projects underway,*** boredom leads to a quarrel. A fight breaks out between two people. What is it about?"
+		},
+		{
+			"Suit": 1,
+			"Face": "K♦",
+			"Text:": "Summer is fleeting. **Discard the top two cards off the top of the deck and take two actions this week.**",
+			"Option1": "",
+			"Option2": ""
+		},
+		{
+			"Suit": 2,
+			"Face": "A♣",
+			"Text": "The community becomes obsessed with a single project. Which one? Why? ***If there are no projects underway, add a Scarcity born of idleness.***",
+			"Option1": "They decide to take more time to ensure that it is perfect. **Add 3 weeks to the project die.**",
+			"Option2": "They drop everything else to work on it. **All other projects fail.**"
+		},
+		{
+			"Suit": 2,
+			"Face": "2♣",
+			"Text": "",
+			"Option1": "Someone returns to the community. Who? Where were they?",
+			"Option2": "You find a body. Do people recognize who it is? What happened?"
+		},
+		{
+			"Suit": 2,
+			"Face": "3♣",
+			"Text": "",
+			"Option1": "Someone leaves the community after issuing a dire warning. Who? What is the warning?",
+			"Option2": "Someone issues a dire warning, and the community leaps into action to avoid disaster. What is the warning? **Start a contentious project that relates to it.**"
+		},
+		{
+			"Suit": 2,
+			"Face": "4♣",
+			"Text": "",
+			"Option1": "The strongest among you dies. What caused the death?",
+			"Option2": "The weakest among you dies. Who’s to blame for their death?"
+		},
+		{
+			"Suit": 2,
+			"Face": "5♣",
+			"Text": "",
+			"Option1": "The Parish arrives. Who are they? Why have they chosen your community, and for what?",
+			"Option2": "A small gang of marauders is making its way through local terrain. How many are there? What weapons do they carry?"
+		},
+		{
+			"Suit": 2,
+			"Face": "6♣",
+			"Text": "",
+			"Option1": "Introduce a dark mystery among the members of the community.",
+			"Option2": "Conflict flares up among community members, and as a result, **a project fails.**"
+		},
+		{
+			"Suit": 2,
+			"Face": "7♣",
+			"Text": "",
+			"Option1": "A project just isn’t working out as expected. **Radically change the nature of this project (don’t modify the project die). When it resolves, you’ll be responsible for telling the community how it went.**",
+			"Option2": "Something goes foul and supplies are ruined. **Add a new Scarcity.**"
+		},
+		{
+			"Suit": 2,
+			"Face": "8♣",
+			"Text": "",
+			"Option1": "Someone sabotages a project, and **the project fails** as a result. Who did this? Why?",
+			"Option2": "Someone is caught trying to sabotage the efforts of the community. How does the community respond?"
+		},
+		{
+			"Suit": 2,
+			"Face": "9♣",
+			"Text": "",
+			"Option1": "The community works constantly, and as a result **a project finishes early.**",
+			"Option2": "A group goes out to explore the map more thoroughly, and finds something that had been previously overlooked."
+		},
+		{
+			"Suit": 2,
+			"Face": "10♣",
+			"Text": "",
+			"Option1": "Harvest is here and plentiful. Add an Abundance.",
+			"Option2": "Cold autumn winds drive out your enemies. **Remove a threatening force from the map and the area.**"
+		},
+		{
+			"Suit": 2,
+			"Face": "J♣",
+			"Text": "",
+			"Option1": "**A project finishes early.** Which one? Why?",
+			"Option2": "***If there are no projects underway,*** restlessness creates animosity, which leads to violence. Who gets hurt?"
+		},
+		{
+			"Suit": 2,
+			"Face": "Q♣",
+			"Text": "Disease spreads through the community.",
+			"Option1": "You spend the week quarantining and treating the disease. **Project dice are not reduced this week.**",
+			"Option2": "Nobody knows what to do about it. **Add “Health and Fertility” as a Scarcity.**"
+		},
+		{
+			"Suit": 2,
+			"Face": "K♣",
+			"Text": "A natural disaster strikes the area.",
+			"Option1": "You focus on getting everyone to safety. **Remove an Abundance and a project fails.**",
+			"Option2": "You focus on protecting your supplies and hardwork at any cost. Several people die as a result."
+		},
+		{
+			"Suit": 3,
+			"Face": "A♠",
+			"Text": "",
+			"Option1": "Now is the time to conserve energy and resources. **A project fails, but gain an Abundance.**",
+			"Option2": "Now is the time for hurried labour and final efforts. **A project finishes early, but gain a Scarcity.**"
+		},
+		{
+			"Suit": 3,
+			"Face": "2♠",
+			"Text": "",
+			"Option1": "A headstrong community member takes charge of the community’s work efforts. **A project fails, and then a different project finishes early.**",
+			"Option2": "A headstrong community member tries to take control of the community. How are they prevented from doing this? Due to the conflict, **project dice are not reduced this week.**"
+		},
+		{
+			"Suit": 3,
+			"Face": "3♠",
+			"Text": "",
+			"Option1": "Someone comes up with an ingenious solution to a big problem, and as a result **a project finishes early.** What was their idea?",
+			"Option2": "Someone comes up with a plan to ensure safety and comfort during the coldest months. **Start a project related to this.**"
+		},
+		{
+			"Suit": 3,
+			"Face": "4♠",
+			"Text": "",
+			"Option1": "All the animals and young children are crying and won’t stop. **Hold a discussion about this, in addition to your regular action for this week.**",
+			"Option2": "A great atrocity is revealed. What is it? Who uncovers it?"
+		},
+		{
+			"Suit": 3,
+			"Face": "5♠",
+			"Text": "",
+			"Option1": "Winter elements destroy a food source. If this was your only food source, **add a Scarcity.**",
+			"Option2": "Winter elements leave everyone cold, tired, and miserable. **Project dice are not reduced this week.**"
+		},
+		{
+			"Suit": 3,
+			"Face": "6♠",
+			"Text": "",
+			"Option1": "The time has come to consolidate your efforts and your borders. **Projects located outside the settlement fail, and all remaining projects are reduced by 2 this week.**",
+			"Option2": "Someone finds a curious opportunity on the edge of the map. **Start a project related to this discovery.**"
+		},
+		{
+			"Suit": 3,
+			"Face": "7♠",
+			"Text": "What is winter like in this area? How do community members react to the weather?",
+			"Option1": "",
+			"Option2": ""
+		},
+		{
+			"Suit": 3,
+			"Face": "8♠",
+			"Text": "Winter is harsh, and desperation gives rise to fear mongering.",
+			"Option1": "Spend the week calming the masses and dispelling their violent sentiments. **The week ends immediately.**",
+			"Option2": "Declare war on someone or something. **This counts as starting a project.**"
+		},
+		{
+			"Suit": 3,
+			"Face": "9♠",
+			"Text": "Someone goes missing. They’re alone in the winter elements.",
+			"Option1": "The community organizes constant search parties and eventually the person is found. **Project dice are not reduced this week.**",
+			"Option2": "No one ever hears from that person again."
+		},
+		{
+			"Suit": 3,
+			"Face": "10♠",
+			"Text": "In preparation for the coming year, the community begins a huge undertaking. **Start a project that will take at least 5 weeks to complete.**",
+			"Option1": "",
+			"Option2": ""
+		},
+		{
+			"Suit": 3,
+			"Face": "J♠",
+			"Text": "An infected outsider arrives, seeking amnesty. They have some much-needed resources with them. Choose one:",
+			"Option1": "Welcome them into the community. **Remove a Scarcity,** but also introduce an infection into the community.",
+			"Option2": "Bar them from entry. What Scarcity could they have addressed? How does its need become more dire this week?"
+		},
+		{
+			"Suit": 3,
+			"Face": "Q♠",
+			"Text": "You see a good omen. What is it?",
+			"Option1": "",
+			"Option2": ""
+		},
+		{
+			"Suit": 3,
+			"Face": "K♠",
+			"Text": "The Frost Shepherds arrive. **The game is over.**",
+			"Option1": "",
+			"Option2": ""
+		}
+    ]
+}
