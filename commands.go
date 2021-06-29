@@ -24,6 +24,9 @@ func init() {
 func begin(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 	if !session {
 		decks = PrepareDecks()
+		for i := range *decks {
+			(*decks)[i].Shuffle()
+		}
 		session = true
 		bot.Session.ChannelMessageSend(mC.ChannelID, "**==Game Begins==**")
 	}
@@ -67,9 +70,23 @@ func drawCard(bot bocto.Bot, mC *discordgo.MessageCreate, in []string) {
 			Footer:    &discordgo.MessageEmbedFooter{Text: remaining + " cards left.", IconURL: IMAGE_URL + emojiFooter},
 			Thumbnail: &discordgo.MessageEmbedThumbnail{URL: IMAGE_URL + emojiThumb},
 		}
+		/*embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
+			Name:   "Description",
+			Value:  card.Text,
+			Inline: false,
+		})
+		embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
+			Name:   "A",
+			Value:  card.Option1,
+			Inline: true,
+		})
+		embed.Fields = append(embed.Fields, &discordgo.MessageEmbedField{
+			Name:   "B",
+			Value:  card.Option2,
+			Inline: true,
+		})*/
 		bot.Session.ChannelMessageSend(mC.ChannelID, "lol")
 		bot.Session.ChannelMessageSendEmbed(mC.ChannelID, embed)
-		println("lol")
 	}
 }
 
